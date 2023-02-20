@@ -1,0 +1,36 @@
+import java.io.*;
+import java.util.*;
+class colories{
+public static void main(String[] args){
+int a[][]={{1000,2000,3000},{4000},{5000,6000},{7000,8000,9000},{10000}};
+int b[]=new int[5];
+int sum=0;
+for(int i=0;i<a.length;i++)
+{
+for(int j=0;j<a[i].length;j++){
+System.out.print(a[i][j]+" ");
+sum+=a[i][j];
+}
+System.out.println();
+b[i]=sum;
+sum = 0;
+}
+System.out.println(Arrays.toString(b));
+ int max=b[0];
+ for(int i=0;i<b.length;i++)
+ {
+	 if(b[i]>max)
+		 max=b[i];
+ }
+ System.out.println("Elves is " + max);
+ 
+ 
+}}
+/*OUTPUT:
+1000 2000 3000
+4000
+5000 6000
+7000 8000 9000
+10000
+[6000, 4000, 11000, 24000, 10000]
+Elves is 24000*/
